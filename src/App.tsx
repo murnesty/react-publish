@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { Task } from "gantt-task-react";
 import {
@@ -10,6 +7,8 @@ import {
   initKubernetesTasks,
   initReactTasks,
 } from "./TaskHelper";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   let studyTasks: Task[] = [];
@@ -20,34 +19,21 @@ function App() {
   studyTasks.push(...initHelmChartTasks());
   console.log(studyTasks);
 
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div
+      className="d-flex flex-column"
+      style={{ height: "100vh", width: "100vw", boxSizing: "border-box" }}
+    >
+      <Navbar />
+      <div className="d-flex" style={{ height: "100%" }}>
+        <Sidebar />
+        <div>
+          <p>
+            <b>Edited by Murnesty...</b>
+          </p>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-        <p>
-          <b>Edited by murnesty...</b>
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   );
 }
 
