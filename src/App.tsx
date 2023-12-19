@@ -2,8 +2,24 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { Task } from "gantt-task-react";
+import {
+  initDDDTasks,
+  initHelmChartTasks,
+  initJFrogTasks,
+  initKubernetesTasks,
+  initReactTasks,
+} from "./TaskHelper";
 
 function App() {
+  let studyTasks: Task[] = [];
+  studyTasks.push(...initReactTasks());
+  studyTasks.push(...initDDDTasks());
+  studyTasks.push(...initKubernetesTasks());
+  studyTasks.push(...initJFrogTasks());
+  studyTasks.push(...initHelmChartTasks());
+  console.log(studyTasks);
+
   const [count, setCount] = useState(0);
 
   return (
