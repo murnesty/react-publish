@@ -102,7 +102,7 @@
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./dist
       ```
-  - import "gantt-task-react/dist/index.css";
+  - refer to https://www.youtube.com/watch?v=XhoWXhyuW_I;
 
 # Starting to code demo project
 
