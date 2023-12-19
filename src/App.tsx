@@ -9,6 +9,7 @@ import {
 } from "./TaskHelper";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import GanttChartContent from "./components/GanttChartContent";
 
 function App() {
   let studyTasks: Task[] = [];
@@ -27,11 +28,7 @@ function App() {
       <Navbar />
       <div className="d-flex" style={{ height: "100%" }}>
         <Sidebar />
-        <div>
-          <p>
-            <b>Edited by Murnesty...</b>
-          </p>
-        </div>
+        <GanttChartContent heading="Study Plan" tasks={studyTasks} />
       </div>
     </div>
   );
