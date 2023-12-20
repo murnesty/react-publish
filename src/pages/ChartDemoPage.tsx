@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
-import MyDoughnut from "./MyDoughnut";
-import MyLineChart from "./MyLineChart";
+import Navbar from "../components/layout/Navbar";
+import Sidebar from "../components/layout/Sidebar";
+import MyDoughnut from "../components/chart-js-demo/MyDoughnut";
+import MyLineChart from "../components/chart-js-demo/MyLineChart";
 
 const ChartDemoPage: React.FC = () => {
   return (

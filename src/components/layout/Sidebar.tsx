@@ -1,4 +1,4 @@
-import IconName from "./IconName";
+import IconName from "../IconName";
 
 const Sidebar = () => {
   const styles: React.CSSProperties = {

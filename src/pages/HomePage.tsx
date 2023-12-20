@@ -6,9 +6,9 @@ import {
   initKubernetesTasks,
   initReactTasks,
 } from "../TaskHelper";
-import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
-import GanttChartContent from "./GanttChartContent";
+import Navbar from "../components/layout/Navbar";
+import Sidebar from "../components/layout/Sidebar";
+import GanttChartContent from "../components/gantt-chart/GanttChartContent";
 
 const HomePage = () => {
   let studyTasks: Task[] = [];
@@ -27,8 +27,6 @@ const HomePage = () => {
       <div className="d-flex" style={{ height: "100%" }}>
         <Sidebar />
         <GanttChartContent heading="Study Plan" tasks={studyTasks} />
-        {/* <MyDoughnut />
-            <MyLineChart /> */}
       </div>
     </div>
   );
