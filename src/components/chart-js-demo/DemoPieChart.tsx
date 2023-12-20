@@ -25,6 +25,8 @@ const DemoPieChart = () => {
       datalabels: {
         anchor: "center",
         align: "center",
+        backgroundColor: "white",
+        borderRadius: "5",
         formatter: function (value: any, context: any) {
           let array = context.dataset.data;
           let total = array.reduce((a: number, v: number) => a + v, 0);
