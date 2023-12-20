@@ -37,6 +37,12 @@
 - installing chart.js
   - at terminal type `npm install --save chart.js react-chartjs-2`
   - to import, refer to https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking. v4-lazy way
+    ```
+    import "chart.js/auto";
+    import { Chart } from "react-chartjs-2";
+    // or
+    import { Bar } from "react-chartjs-2";
+    ```
   - for data label, 
     - import `import ChartDataLabels from "chartjs-plugin-datalabels";`
       ```
