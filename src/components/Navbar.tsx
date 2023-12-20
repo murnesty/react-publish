@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
@@ -26,13 +28,13 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Planner
+                <Link to="/react-publish/">Planner</Link>
               </a>
             </li>
 
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Link
+                <Link to="/react-publish/chartdemopage">Demo Chart.js</Link>
               </a>
             </li>
 

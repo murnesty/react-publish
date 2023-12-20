@@ -46,6 +46,20 @@
   - at teminal type `npm install gantt-task-react`
   - import this to main.tsx: `import "gantt-task-react/dist/index.css";`
   - refer to https://github.com/MaTeMaTuK/gantt-task-react
+- install react-router-dom
+  - at terminal type `npm install react-router-dom`
+  - add routes at App.tsx
+    ```
+      <BrowserRouter>
+        <Routes>
+          <Route path="/react-publish/" element={<Homepage />} />
+        </Routes>
+      </BrowserRouter>
+    ```
+  - on navigator
+    - import by `import { Link } from "react-router-dom";`
+    - <Link to="/<project name>/">link name here</Link>
+      - need to add <project name> as vite.config.ts has added base for gh-pages. else don't need.
 - install "Reach Developer Tool" for browser
   - with this, F12 has 2 more options in menu bar: Components and Profiler
     - Components can see the components props and DOM it responsible
@@ -107,6 +121,8 @@
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./dist
       ```
+  - goto github.com and change `settings -> workflow permissions -> Read and write permission`
+  - then goto `settings -> pages -> branch -> select branch: gh-pages` and wait for actions rebuild
   - refer to https://www.youtube.com/watch?v=XhoWXhyuW_I;
   - this project has published to https://murnesty.github.io/react-publish/
 
