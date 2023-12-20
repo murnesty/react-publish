@@ -9,7 +9,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="bg-dark" style={styles} data-bs-theme="dark">
+    <div className="bg-dark d-none" style={styles} data-bs-theme="dark">
       <IconName icon="fa-solid fa-compass-drafting" heading="Planner" />
 
       <ul className="nav flex-column">

@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "../components/layout/Navbar";
 import Sidebar from "../components/layout/Sidebar";
-import MyDoughnut from "../components/chart-js-demo/MyDoughnut";
-import MyLineChart from "../components/chart-js-demo/MyLineChart";
+import ChartDemoGrid from "../components/chart-js-demo/ChartDemoGrid";
 
 const ChartDemoPage: React.FC = () => {
   return (
@@ -13,8 +12,7 @@ const ChartDemoPage: React.FC = () => {
       <Navbar />
       <div className="d-flex" style={{ height: "100%" }}>
         <Sidebar />
-        <MyDoughnut />
-        <MyLineChart />
+        <ChartDemoGrid />
       </div>
     </div>
   );

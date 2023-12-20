@@ -37,8 +37,26 @@
 - installing chart.js
   - at terminal type `npm install --save chart.js react-chartjs-2`
   - to import, refer to https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking. v4-lazy way
+  - for data label, 
+    - import `import ChartDataLabels from "chartjs-plugin-datalabels";`
+      ```
+      const plugins: any = [ChartDataLabels]; // same here set to any type
+
+      const options: any = {  // set type to any instead of ChartOptions from chart.js
+        plugins: {
+          datalabels: {
+            anchor: "end",
+            align: "end",
+          },
+        },
+      };
+      
+      <Pie data={data} options={options} plugins={plugins} />
+      ```
+    - for the type casting refer to https://stackoverflow.com/questions/70158529/using-chart-js-options-with-react-chartjs-2-and-typescript
   - refer to https://www.chartjs.org/docs/latest/getting-started/integration.html
   - refer to https://react-chartjs-2.js.org/
+  - refer to https://chartjs-plugin-datalabels.netlify.app/guide/getting-started.html
 - installing fontawesome
   - at terminal type `npm install --save @fortawesome/fontawesome-free`
   - import this to main.tsx: `import "@fortawesome/fontawesome-free/css/all.css";`
@@ -215,10 +233,16 @@
 
   - Specific function argument type
     - javascript is a loosely type language. So sometimes argument not sure what type it is then there is no auto complete on editor
+    - for type that unknown eg. library doc didn't mention. We can use **any** type to skip warning, eg (value:any)
     - to solve this,
       - just add `: type`. Example: `(event: MouseEvent) => console.log(event);`.
       - also import the event by `import { MouseEvent } from "react";`
-
+  - to solve unused argument eg only used 2nd argument but 1st is unused.
+    ```
+    formatter: function (_value: any, context: any) {
+      // in here, just prefix _ to value.
+    }
+    ```
 - Hook / State
 
   - tell react that this variable value will changed over time. Example

@@ -1,34 +1,31 @@
 import "chart.js/auto";
 import { Chart } from "react-chartjs-2";
 
-const MyLineChart = () => {
-  const styles: React.CSSProperties = {
-    width: 400,
-    height: 400,
-  };
-
+const DemoLineChart = () => {
   const chartData = {
     labels: ["Jun", "Jul", "Aug"],
     datasets: [
       {
         id: 1,
-        label: "",
+        label: "Line 1",
         data: [5, 6, 7],
       },
       {
         id: 2,
-        label: "",
+        label: "Line 2",
         data: [3, 2, 1],
       },
     ],
   };
 
   return (
-    <div style={styles}>
+    <div className="h-100 d-flex flex-column">
       <h3>Line Chart</h3>
-      <Chart type="line" data={chartData} />
+      <div className="bg-light">
+        <Chart type="line" data={chartData} />
+      </div>
     </div>
   );
 };
 
-export default MyLineChart;
+export default DemoLineChart;
