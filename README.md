@@ -280,3 +280,54 @@
         console.log(text);
       };
     ```
+
+  - Class components
+    - ref: https://www.w3schools.com/react/react_class.asp
+    - class, constructor render. Then predefined class property: state and props
+    ```
+    class Car extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          brand: "Ford",
+          color: "red"
+        }
+      }
+      render() {
+        return (
+          <div>
+            <h1>My {this.state.brand} Car is {this.state.color} color.</h1>
+          </div>
+        )
+      }
+    }
+    ```
+    - class life cycle has 3 phases: 
+      - **Mounting**: means putting elements into the DOM.
+        - **constructor()** 
+          - to set up the initial state and other initial values
+        - **[common] getDerivedStateFromProps()**
+          - is called right before rendering the element(s) in the DOM. 
+          - to set the state object based on the initial props.
+        - **[common] render()**
+          - to outputs the HTML to the DOM.
+        - **[common] componentDidMount()**
+          - is called after the component is rendered. 
+          - this is where you run statements that requires that the component is already placed in the DOM.
+      - **Updating**: this phase in the lifecycle is when a component is updated.
+        - **getSnapshotBeforeUpdate()**
+          - you have access to the props and state before the update, 
+          - meaning that even after the update, you can check what the values were before the update.
+        - **shouldComponentUpdate()**
+          - you can return a Boolean value that specifies whether React should continue with the rendering or not.
+          - the default value is true.
+        - **[common] getDerivedStateFromProps()**
+          - is called right before rendering the element(s) in the DOM. 
+          - to set the state object based on the initial props.
+        - **[common] render()**
+          - to outputs the HTML to the DOM.
+        - **[common] componentDidUpdate()**
+          - is called after the component is updated in the DOM.
+      - **Unmounting**: this phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.
+        - **[common] componentWillUnmount()**
+          - is called when the component is about to be removed from the DOM.

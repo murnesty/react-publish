@@ -18,7 +18,6 @@ function App() {
   studyTasks.push(...initKubernetesTasks());
   studyTasks.push(...initJFrogTasks());
   studyTasks.push(...initHelmChartTasks());
-  console.log(studyTasks);
 
   return (
     <div

@@ -15,25 +15,23 @@ interface Props {
 }
 
 const GanttChartContent = ({ heading, tasks }: Props) => {
-  const style = {
+  const styles: React.CSSProperties = {
     display: "flex",
-    "flex-direction": "column",
+    flexDirection: "column",
     gap: "1em",
     padding: "1em",
     overflow: "auto",
   };
 
   const [viewMode, setViewMode] = useState(ViewMode.Month);
-  const [columnWidth, setColumnWidth] = useState(150);
+  const [columnWidth, setColumnWidth] = useState(100);
 
   const handleChangeViewMode = (mode: ViewMode) => {
     setViewMode(mode);
 
     if (mode === ViewMode.Year) {
-      setColumnWidth(200);
-    } else if (mode === ViewMode.Month) {
-      setColumnWidth(150);
-    } else if (mode === ViewMode.Week) {
+      setColumnWidth(350);
+    } else {
       setColumnWidth(100);
     }
 
@@ -41,7 +39,7 @@ const GanttChartContent = ({ heading, tasks }: Props) => {
   };
 
   return (
-    <div style={style}>
+    <div style={styles}>
       <div className="d-flex">
         <h5 className="my-auto">{heading}</h5>
         <GanttChartViewMode onViewModeChanged={handleChangeViewMode} />
@@ -52,12 +50,10 @@ const GanttChartContent = ({ heading, tasks }: Props) => {
         columnWidth={columnWidth}
         listCellWidth={""}
       />
-      <div className="d-block">
-        <div className="p-2">
-          <p>
-            <b>Edited by Murnesty...</b>
-          </p>
-        </div>
+      <div className="ms-auto p-2">
+        <small>
+          <i>Edited by Murnesty on 19 Dec 2023</i>
+        </small>
       </div>
     </div>
   );

@@ -1,15 +1,15 @@
 import IconName from "./IconName";
 
 const Sidebar = () => {
-  const style = {
+  const styles: React.CSSProperties = {
     display: "flex",
-    "flex-direction": "column",
+    flexDirection: "column",
     gap: "1em",
     padding: "1em",
   };
 
   return (
-    <div className="bg-dark" style={style} data-bs-theme="dark">
+    <div className="bg-dark" style={styles} data-bs-theme="dark">
       <IconName icon="fa-solid fa-compass-drafting" heading="Planner" />
 
       <ul className="nav flex-column">
