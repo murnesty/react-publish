@@ -10,6 +10,8 @@ import {
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import GanttChartContent from "./components/GanttChartContent";
+// import MyDoughnut from "./components/MyDoughnut";
+// import MyLineChart from "./components/MyLineChart";
 
 function App() {
   let studyTasks: Task[] = [];
@@ -28,6 +30,8 @@ function App() {
       <div className="d-flex" style={{ height: "100%" }}>
         <Sidebar />
         <GanttChartContent heading="Study Plan" tasks={studyTasks} />
+        {/* <MyDoughnut />
+        <MyLineChart /> */}
       </div>
     </div>
   );

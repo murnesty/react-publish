@@ -32,8 +32,13 @@
     - `import 'popper.js'`;
     - `import 'bootstrap/dist/js/bootstrap.bundle.min.js'`
 - installing d3
-  - at terminal type `npm install d3`
+  - at terminal type `npm install d3` and `npm install @types/d3`
   - import this to main.tsx: `import * as d3 from 'd3';`
+- installing chart.js
+  - at terminal type `npm install --save chart.js react-chartjs-2`
+  - to import, refer to https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking. v4-lazy way
+  - refer to https://www.chartjs.org/docs/latest/getting-started/integration.html
+  - refer to https://react-chartjs-2.js.org/
 - installing fontawesome
   - at terminal type `npm install --save @fortawesome/fontawesome-free`
   - import this to main.tsx: `import "@fortawesome/fontawesome-free/css/all.css";`
