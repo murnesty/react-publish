@@ -103,6 +103,7 @@
                   publish_dir: ./dist
       ```
   - refer to https://www.youtube.com/watch?v=XhoWXhyuW_I;
+  - this project has published to https://murnesty.github.io/react-publish/
 
 # Starting to code demo project
 

@@ -47,6 +47,18 @@ export function initReactTasks() {
       isDisabled: true,
       styles: { progressColor: "#ffbb54", progressSelectedColor: "#ff9e0d" },
     },
+    {
+      start: new Date(2023, 11, 20),
+      end: new Date(2023, 11, 21),
+      name: "Study class component. https://www.w3schools.com/react/react_class.asp",
+      id: "React 3",
+      type: "task",
+      project: "react",
+      dependencies: ["React 2"],
+      progress: 0,
+      isDisabled: true,
+      styles: { progressColor: "#ffbb54", progressSelectedColor: "#ff9e0d" },
+    },
   ];
 
   return tasks;
