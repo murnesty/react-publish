@@ -84,6 +84,9 @@
     - import by `import { Link } from "react-router-dom";`
     - <Link to="/<project name>/">link name here</Link>
       - need to add <project name> as vite.config.ts has added base for gh-pages. else don't need.
+- install lodash
+  - at terminal type `npm install lodash`, `npm install --save-dev @types/lodash`
+  - import this to your tsx file `import _ from "lodash";`
 - install "Reach Developer Tool" for browser
   - with this, F12 has 2 more options in menu bar: Components and Profiler
     - Components can see the components props and DOM it responsible
